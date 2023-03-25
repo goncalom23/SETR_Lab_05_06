@@ -13,7 +13,7 @@
 
 extern char Kp, Ti, Td;
 
-int main(void) 
+int main(void)
 {
 	int res;
 	
