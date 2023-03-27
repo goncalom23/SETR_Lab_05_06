@@ -156,6 +156,8 @@ int cmdProcessor(void)
 
 /** \brief
  * Adds a char to the cmd string 	
+ * \param[in] newCharz  char to be added at the cmd string
+ * 
  *	\return 				        
  *  	 0: if success 		        
  * 		-6: if cmd string full 	    
