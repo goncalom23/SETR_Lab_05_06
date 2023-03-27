@@ -1,0 +1,24 @@
+/*! \mainpage SETR_Lab05_06 Documentation
+ *
+ *  \authors Paulo Pedreiras, Gonçalo Martins <goncalom23@ua.pt> and Filipe Silva <filipe.msilva@ua.pt>
+ *
+ * This project helps to understand the usage of Unity as a tool for program testing.
+ * 
+ * - \subpage testcmdproc
+ *
+ * - \subpage cmdproc
+ *
+ * \bug No known bugs.
+ */ 
+
+/*! \page testcmdproc
+ *
+ * Testing module using Unity for cmdproc 
+ *
+ */
+
+/*! \page cmdproc
+ *
+ * Command processor example
+ *
+ */
