@@ -1,6 +1,7 @@
 /*!
  * \file:   cmdproc.c
- * \author: Paulo Pedreiras, Gonçalo Martins <goncalom23@ua.pt> and Filipe Silva <filipe.msilva@ua.pt>
+ * \author: Gonçalo Martins <goncalom23@ua.pt> and Filipe Silva <filipe.msilva@ua.pt> base on the
+ * example code provided by Prof. Paulo Pedreiras
  * 
  * \date March 20, 2023, 09:47 AM
  * \brief
@@ -38,6 +39,30 @@ int setpoint, output, error;
 static unsigned char cmdString[MAX_CMDSTRING_SIZE];
 static unsigned char cmdStringLen = 0; 
 
+/** \brief
+ *  Calculates the crc with 8bits (unsigned char size)
+ *  \param[in] data buffer with the message to calculate the CRC
+ *  \param[in] length length of the message
+ *	\return                        
+ *	crc: generated crc value                                                      	 
+ */ 
+unsigned char crc8(unsigned char *data, int length) 
+{
+    unsigned char crc = 0;  /* Initial CRC value */ 
+    int i, j;
+    for (i = 0; i < length; i++) {
+        crc ^= data[i];  /* XOR the next byte into the CRC*/
+        for (j = 0; j < 8; j++) {
+            if (crc & 0x80) {
+                crc = (crc << 1) ^ POLYNOMIAL;  /* If the top bit is 1, shift and XOR the polynomial*/
+            } else {
+                crc <<= 1;  /* If the top bit is 0, just shift*/
+            }
+        }
+    }
+
+    return crc;
+}
 
 /** \brief
  *  Processes the the chars received so far looking for commands 
@@ -113,12 +138,20 @@ int cmdProcessor(void)
 			return WRONG_COMMAND_FORMAT;
 			}
 
-			unsigned char checksum = cmdString[i+1] + cmdString[i+2] + cmdString[i+3] +cmdString[i+4];
+			unsigned char buffer[] = {cmdString[i+1],cmdString[i+2],cmdString[i+3],cmdString[i+4]};
+    		unsigned char crc = crc8(buffer, 4);
+			printf("crc: %u\n\r", crc);
+			if(crc != cmdString[i+5])
+			{
+			resetCmdString();
+			return CRC_ERROR_DETECTED;
+			}
+			/*unsigned char checksum = cmdString[i+1] + cmdString[i+2] + cmdString[i+3] +cmdString[i+4];
 			if(checksum  !=  cmdString[i+5])
 			{
 			resetCmdString();
 			return CS_ERROR_DETECTED;
-			}
+			}*/
 
 			Kp = cmdString[i+2];
 			Ti = cmdString[i+3];
@@ -188,3 +221,5 @@ int resetCmdString(void)
 	cmdStringLen = 0;		
 	return EXIT_SUCESSFUL;
 }
+
+/*////////////////////////////*/

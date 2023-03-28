@@ -1,4 +1,4 @@
-/**
+ /**
  * \file:   testcmdproc.c
  * \author: Gonçalo Martins <goncalom23@ua.pt> and Filipe Silva <filipe.msilva@ua.pt>
  *
@@ -33,7 +33,9 @@ void test_cmdProcessor_EXIT_SUCESSFUL(void)
     newCmdChar('1');
     newCmdChar('2');
     newCmdChar('3');
-	newCmdChar((unsigned char)('P'+'1'+'2'+'3'));
+	unsigned char buffer1[] = {'P','1','2','3'};
+    unsigned char crc1 = crc8(buffer1, 4);
+	newCmdChar(crc1);
 	newCmdChar('!');
 	TEST_ASSERT_EQUAL_INT(EXIT_SUCESSFUL, cmdProcessor());	
 
@@ -45,7 +47,9 @@ void test_cmdProcessor_EXIT_SUCESSFUL(void)
     newCmdChar('1');
     newCmdChar('2');
     newCmdChar('3');
-	newCmdChar((unsigned char)('P'+'1'+'2'+'3'));
+	unsigned char buffer2[] = {'P','1','2','3'};
+    unsigned char crc2 = crc8(buffer2, 4);
+	newCmdChar(crc2);
 	newCmdChar('!');
 	TEST_ASSERT_EQUAL_INT(EXIT_SUCESSFUL, cmdProcessor());
 }
@@ -103,9 +107,8 @@ void test_cmdProcessor_NO_VALID_COMMAND_FOUND(void)
 	TEST_ASSERT_EQUAL_INT(NO_VALID_COMMAND_FOUND, cmdProcessor());
 }
 
-/*! Function using Unity used to test if the cmdProcessor returns CS_ERROR_DETECTED
+/* Function using Unity used to test if the cmdProcessor returns CS_ERROR_DETECTED
 *	when suposed to
-*/
 void test_cmdProcessor_CS_ERROR_DETECTED(void)
 {
 	resetCmdString();
@@ -124,7 +127,26 @@ void test_cmdProcessor_CS_ERROR_DETECTED(void)
     newCmdChar('1');
 	newCmdChar('!');
 	TEST_ASSERT_EQUAL_INT(CS_ERROR_DETECTED, cmdProcessor());
+}*/
+
+/*! Function using Unity used to test if the cmdProcessor returns CRC_ERROR_DETECTED
+*	when suposed to
+*/
+void test_cmdProcessor_CRC_ERROR_DETECTED(void)
+{
+	resetCmdString();
+    newCmdChar('#');
+    newCmdChar('P');
+    newCmdChar('1');
+    newCmdChar('2');
+    newCmdChar('3');
+	unsigned char buffer1[] = {'P','1','2','4'};
+    unsigned char crc1 = crc8(buffer1, 4);
+	newCmdChar(crc1);
+	newCmdChar('!');
+	TEST_ASSERT_EQUAL_INT(CRC_ERROR_DETECTED, cmdProcessor());	
 }
+
 
 /*! Function using Unity used to test if the cmdProcessor returns WRONG_COMMAND_FORMAT
 *	when suposed to
@@ -188,8 +210,10 @@ void test_cmdProcessor_SYNTAX_ERROR_DETECTED(void)
 	newCmdChar('1');
 	newCmdChar('2');	
 	newCmdChar('W');
-	newCmdChar((unsigned char)('P' + '1' + '2' + 'W'));
-    newCmdChar('!');	
+	unsigned char buffer1[] = {'P','1','2','4'};
+    unsigned char crc1 = crc8(buffer1, 4);
+	newCmdChar(crc1);
+	newCmdChar('!');
 	TEST_ASSERT_EQUAL_INT(SYNTAX_ERROR_DETECTED, cmdProcessor());
 
 	resetCmdString();
@@ -198,8 +222,10 @@ void test_cmdProcessor_SYNTAX_ERROR_DETECTED(void)
 	newCmdChar('1');
 	newCmdChar('R');	
 	newCmdChar('3');
-	newCmdChar((unsigned char)('P' + '1' + 'R' + '3'));
-    newCmdChar('!');	
+	unsigned char buffer2[] = {'P','1','2','4'};
+    unsigned char crc2 = crc8(buffer2, 4);
+	newCmdChar(crc2);
+	newCmdChar('!');
 	TEST_ASSERT_EQUAL_INT(SYNTAX_ERROR_DETECTED, cmdProcessor());
 
 }
@@ -216,8 +242,8 @@ int main(void)
 	RUN_TEST(test_cmdProcessor_EMPTY_STRING);	
 	RUN_TEST(test_cmdProcessor_NO_VALID_COMMAND_FOUND);
 
-	RUN_TEST(test_cmdProcessor_CS_ERROR_DETECTED);
-
+	/*RUN_TEST(test_cmdProcessor_CS_ERROR_DETECTED);*/
+	RUN_TEST(test_cmdProcessor_CRC_ERROR_DETECTED);
 
 	RUN_TEST(test_cmdProcessor_WRONG_COMMAND_FORMAT);
 	RUN_TEST(test_cmdProcessor_INCOMPLETE_COMMAND);
