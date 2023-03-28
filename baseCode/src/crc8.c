@@ -1,7 +1,7 @@
  /**
  * \file:   crc8.c
- * \author: Gonçalo Martins <goncalom23@ua.pt> and Filipe Silva <filipe.msilva@ua.pt>
- *
+ * \author: Gonçalo Martins <goncalom23@ua.pt> and Filipe Silva <filipe.msilva@ua.pt>, adapted from https://openai.com/blog/chatgpt
+ * 
  * \date March 20, 2023, 09:47 AM
  * \brief CRC - Cyclic Redundancy Check with 8 bits
  * 
