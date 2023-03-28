@@ -27,15 +27,15 @@
 #define SOF_SYM '#'	                /*!< Start of Frame Symbol */
 #define EOF_SYM '!'                 /*!< End of Frame Symbol */
 
-#define EXIT_SUCESSFUL 0            /*!< Function worked as suposed                                  */
-#define EMPTY_STRING -1             /*!< -1: if empty string found  	                             */
-#define NO_VALID_COMMAND_FOUND -2   /*!< -2: if there is no valid command found                      */
-#define CS_ERROR_DETECTED -3        /*!< -3: if a CS error is detected (checksum not correct)        */
-#define WRONG_COMMAND_FORMAT -4     /*!< -4: if string format is wrong (No start or end frame)		 */
-#define INCOMPLETE_COMMAND -5       /*!< -5: incomplete command found                             	 */
-#define FULL_STRING -6              /*!< -6: if cmd string full 	                                 */
-#define SYNTAX_ERROR_DETECTED -7    /*!< -7: if is detected a error in the syntax of the command     */
-#define CRC_ERROR_DETECTED -8 		/*!< -8: if there is an error on the CRC error check    		 */
+#define EXIT_SUCESSFUL 0            /*!< Function worked as suposed                                 */
+#define EMPTY_STRING -1             /*!< -1: if empty string found  	                              */
+#define NO_VALID_COMMAND_FOUND -2   /*!< -2: if there is no valid command found                     */
+#define CS_ERROR_DETECTED -3        /*!< -3: if a CS error is detected (checksum not correct)       */
+#define WRONG_COMMAND_FORMAT -4     /*!< -4: if string format is wrong (No start or end frame)		  */
+#define INCOMPLETE_COMMAND -5       /*!< -5: incomplete command found                             	*/
+#define FULL_STRING -6              /*!< -6: if cmd string full 	                                  */
+#define SYNTAX_ERROR_DETECTED -7    /*!< -7: if is detected a error in the syntax of the command    */
+#define CRC_ERROR_DETECTED -8 		  /*!< -8: if there is an error on the CRC error check    		    */
 
 /* Function prototypes */
 
