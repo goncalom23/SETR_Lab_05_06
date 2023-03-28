@@ -24,8 +24,9 @@
 */
 var NAVTREE =
 [
-  [ "My Project", "index.html", [
-    [ "SETR_Lab05_06 Documentation", "index.html", "index" ],
+  [ "SETR_Lab05_06 Documentation", "index.html", [
+    [ "testcmdproc", "testcmdproc.html", null ],
+    [ "cmdproc", "cmdproc.html", null ],
     [ "Bug List", "bug.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

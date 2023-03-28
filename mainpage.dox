@@ -1,6 +1,7 @@
 /*! \mainpage SETR_Lab05_06 Documentation
  *
- *  \authors Paulo Pedreiras, Gonçalo Martins <goncalom23@ua.pt> and Filipe Silva <filipe.msilva@ua.pt>
+ *  \authors Gonçalo Martins <goncalom23@ua.pt> and Filipe Silva <filipe.msilva@ua.pt> base on the
+ * example code provided by Prof. Paulo Pedreiras
  *
  * This project helps to understand the usage of Unity as a tool for program testing.
  * 

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['teardown_0',['tearDown',['../testcmdproc_8c.html#a9909011e5fea0c018842eec4d93d0662',1,'testcmdproc.c']]],
-  ['test_5fcmdprocessor_5fcs_5ferror_5fdetected_1',['test_cmdProcessor_CS_ERROR_DETECTED',['../testcmdproc_8c.html#ae440884aba132b4cd2f618ab948beff5',1,'testcmdproc.c']]],
+  ['test_5fcmdprocessor_5fcrc_5ferror_5fdetected_1',['test_cmdProcessor_CRC_ERROR_DETECTED',['../testcmdproc_8c.html#abf6b6125cdb1460a559fe6329319679e',1,'testcmdproc.c']]],
   ['test_5fcmdprocessor_5fempty_5fstring_2',['test_cmdProcessor_EMPTY_STRING',['../testcmdproc_8c.html#a300d1caaa6016e6ab512c6d521cabc23',1,'testcmdproc.c']]],
   ['test_5fcmdprocessor_5fexit_5fsucessful_3',['test_cmdProcessor_EXIT_SUCESSFUL',['../testcmdproc_8c.html#aebf968320d9978fd88988f7030fef662',1,'testcmdproc.c']]],
   ['test_5fcmdprocessor_5fincomplete_5fcommand_4',['test_cmdProcessor_INCOMPLETE_COMMAND',['../testcmdproc_8c.html#a445ede505c71cab4a42e3d5d29b48a49',1,'testcmdproc.c']]],

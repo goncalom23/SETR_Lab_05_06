@@ -7,5 +7,7 @@ digraph "cmdProcessor"
   rankdir="LR";
   Node1 [label="cmdProcessor",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Processes the the chars received so far looking for commands."];
   Node1 -> Node2 [color="steelblue1",style="solid"];
-  Node2 [label="resetCmdString",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cmdproc_8c.html#a0ca5ed7b8f6b1a5ee8f1ae22ea9d0400",tooltip="Resets the commanbd string."];
+  Node2 [label="crc8",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$crc8_8c.html#a966a4f0cb0641198e11dbb8c09653b4b",tooltip="Calculates the crc with 8bits (unsigned char size)"];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="resetCmdString",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cmdproc_8c.html#a0ca5ed7b8f6b1a5ee8f1ae22ea9d0400",tooltip="Resets the commanbd string."];
 }

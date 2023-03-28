@@ -5,11 +5,14 @@
  * 
  * \date March 20, 2023, 09:47 AM
  * \brief
- * Apropriate returns defines
- * Function prototypes
+ * Apropriate returns defines for the cmdproc and respective function prototypes
  */
 
 
+
+#include <stdio.h>
+#include <stdint.h>
+#include "crc8.h"
 
 #ifndef __CMD_PROC_H_
 #define __CMD_PROC_H_
@@ -32,13 +35,9 @@
 #define INCOMPLETE_COMMAND -5       /*!< -5: incomplete command found                             	 */
 #define FULL_STRING -6              /*!< -6: if cmd string full 	                                 */
 #define SYNTAX_ERROR_DETECTED -7    /*!< -7: if is detected a error in the syntax of the command     */
-#define  CRC_ERROR_DETECTED -8 		/*!< -8: if there is an error on the CRC error check    		 */
-
-#define POLYNOMIAL 0x07  /* CRC-8 polynomial */
+#define CRC_ERROR_DETECTED -8 		/*!< -8: if there is an error on the CRC error check    		 */
 
 /* Function prototypes */
-
-unsigned char crc8(unsigned char *data, int length);
 
 int cmdProcessor(void);
 

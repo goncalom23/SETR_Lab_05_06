@@ -9,6 +9,7 @@
 
 #include <unity.h>
 #include "cmdproc.h"
+#include "crc8.h"
 
 /*! Unity Function called at the beggining */
 void setUp(void)											

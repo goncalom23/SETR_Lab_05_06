@@ -7,7 +7,7 @@ digraph "cmdProcessor"
   rankdir="RL";
   Node1 [label="cmdProcessor",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Processes the the chars received so far looking for commands."];
   Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
-  Node2 [label="test_cmdProcessor_CS\l_ERROR_DETECTED",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$testcmdproc_8c.html#ae440884aba132b4cd2f618ab948beff5",tooltip=" "];
+  Node2 [label="test_cmdProcessor_CRC\l_ERROR_DETECTED",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$testcmdproc_8c.html#abf6b6125cdb1460a559fe6329319679e",tooltip=" "];
   Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
   Node3 [label="test_cmdProcessor_EMPTY\l_STRING",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$testcmdproc_8c.html#a300d1caaa6016e6ab512c6d521cabc23",tooltip=" "];
   Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];

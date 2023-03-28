@@ -11,6 +11,7 @@ var cmdproc_8h =
     [ "INCOMPLETE_COMMAND", "cmdproc_8h.html#a0c2812378f2a89e935b137958c447878", null ],
     [ "FULL_STRING", "cmdproc_8h.html#a27d0073f2e6aeaf9ba88887a24a3cd85", null ],
     [ "SYNTAX_ERROR_DETECTED", "cmdproc_8h.html#a9a7d646bd4ee70a8486743e1ee512431", null ],
+    [ "CRC_ERROR_DETECTED", "cmdproc_8h.html#aec3dad204b69ec1f639d5188abde8642", null ],
     [ "cmdProcessor", "cmdproc_8h.html#afbdfe0465dfd34a5f244fe41fa27c12a", null ],
     [ "newCmdChar", "cmdproc_8h.html#aeef5e88ff5a207e83ac21996c98d375d", null ],
     [ "resetCmdString", "cmdproc_8h.html#a0ca5ed7b8f6b1a5ee8f1ae22ea9d0400", null ]

@@ -9,8 +9,10 @@ digraph "test_cmdProcessor_NO_VALID_COMMAND_FOUND"
   Node1 -> Node2 [color="steelblue1",style="solid"];
   Node2 [label="cmdProcessor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cmdproc_8c.html#afbdfe0465dfd34a5f244fe41fa27c12a",tooltip="Processes the the chars received so far looking for commands."];
   Node2 -> Node3 [color="steelblue1",style="solid"];
-  Node3 [label="resetCmdString",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cmdproc_8c.html#a0ca5ed7b8f6b1a5ee8f1ae22ea9d0400",tooltip="Resets the commanbd string."];
+  Node3 [label="crc8",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$crc8_8c.html#a966a4f0cb0641198e11dbb8c09653b4b",tooltip="Calculates the crc with 8bits (unsigned char size)"];
+  Node2 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="resetCmdString",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cmdproc_8c.html#a0ca5ed7b8f6b1a5ee8f1ae22ea9d0400",tooltip="Resets the commanbd string."];
+  Node1 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="newCmdChar",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cmdproc_8c.html#aeef5e88ff5a207e83ac21996c98d375d",tooltip="Adds a char to the cmd string"];
   Node1 -> Node4 [color="steelblue1",style="solid"];
-  Node4 [label="newCmdChar",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cmdproc_8c.html#aeef5e88ff5a207e83ac21996c98d375d",tooltip="Adds a char to the cmd string"];
-  Node1 -> Node3 [color="steelblue1",style="solid"];
 }

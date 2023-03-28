@@ -1,16 +1,7 @@
 var searchData=
 [
-  ['teardown_0',['tearDown',['../testcmdproc_8c.html#a9909011e5fea0c018842eec4d93d0662',1,'testcmdproc.c']]],
-  ['test_5fcmdprocessor_5fcs_5ferror_5fdetected_1',['test_cmdProcessor_CS_ERROR_DETECTED',['../testcmdproc_8c.html#ae440884aba132b4cd2f618ab948beff5',1,'testcmdproc.c']]],
-  ['test_5fcmdprocessor_5fempty_5fstring_2',['test_cmdProcessor_EMPTY_STRING',['../testcmdproc_8c.html#a300d1caaa6016e6ab512c6d521cabc23',1,'testcmdproc.c']]],
-  ['test_5fcmdprocessor_5fexit_5fsucessful_3',['test_cmdProcessor_EXIT_SUCESSFUL',['../testcmdproc_8c.html#aebf968320d9978fd88988f7030fef662',1,'testcmdproc.c']]],
-  ['test_5fcmdprocessor_5fincomplete_5fcommand_4',['test_cmdProcessor_INCOMPLETE_COMMAND',['../testcmdproc_8c.html#a445ede505c71cab4a42e3d5d29b48a49',1,'testcmdproc.c']]],
-  ['test_5fcmdprocessor_5fno_5fvalid_5fcommand_5ffound_5',['test_cmdProcessor_NO_VALID_COMMAND_FOUND',['../testcmdproc_8c.html#adc5cc9d6b715c036b0706202abf576e4',1,'testcmdproc.c']]],
-  ['test_5fcmdprocessor_5fsyntax_5ferror_5fdetected_6',['test_cmdProcessor_SYNTAX_ERROR_DETECTED',['../testcmdproc_8c.html#a73ac4d71da96dcac82e8b5e5b8cddb99',1,'testcmdproc.c']]],
-  ['test_5fcmdprocessor_5fwrong_5fcommand_5fformat_7',['test_cmdProcessor_WRONG_COMMAND_FORMAT',['../testcmdproc_8c.html#a8a9f347da71363adda610f8099dd0796',1,'testcmdproc.c']]],
-  ['test_5fnewcmdchar_5fexit_5fsucessful_8',['test_newCmdChar_EXIT_SUCESSFUL',['../testcmdproc_8c.html#a7df507aca41fb178e5014ddebfe631c3',1,'testcmdproc.c']]],
-  ['test_5fnewcmdchar_5ffull_5fstring_9',['test_newCmdChar_FULL_STRING',['../testcmdproc_8c.html#aca256473ec6037ed94dd8042e14b2c94',1,'testcmdproc.c']]],
-  ['test_5fresetcmdstring_5fexit_5fsucessful_10',['test_resetCmdString_EXIT_SUCESSFUL',['../testcmdproc_8c.html#a1ec06dc2560201bf18669b548b584f29',1,'testcmdproc.c']]],
-  ['testcmdproc_11',['testcmdproc',['../testcmdproc.html',1,'index']]],
-  ['testcmdproc_2ec_12',['testcmdproc.c',['../testcmdproc_8c.html',1,'']]]
+  ['setr_5flab05_5f06_20documentation_0',['SETR_Lab05_06 Documentation',['../index.html',1,'']]],
+  ['setup_1',['setUp',['../testcmdproc_8c.html#a95c834d6178047ce9e1bce7cbfea2836',1,'testcmdproc.c']]],
+  ['sof_5fsym_2',['SOF_SYM',['../cmdproc_8h.html#a98ce42a3f4332d00581da3291c9865cb',1,'cmdproc.h']]],
+  ['syntax_5ferror_5fdetected_3',['SYNTAX_ERROR_DETECTED',['../cmdproc_8h.html#a9a7d646bd4ee70a8486743e1ee512431',1,'cmdproc.h']]]
 ];
